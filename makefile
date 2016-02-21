@@ -1,5 +1,7 @@
+flags = -std=c++11 -Os -Wall -lboost_system -lboost_filesystem
+
 all:
-	g++ wolffs.cpp -std=c++11 -Os -Wall -c -fpic
+	g++ wolffs.cpp $(flags) -c -fpic
 	g++ -shared -o libwolffs.so wolffs.o
 
 install:

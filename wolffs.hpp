@@ -11,7 +11,9 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FS_H
-#define FS_H
-
+#ifndef WOLFFS_H
+#define WOLFFS_H
+extern const std::string HomeDir = getenv("HOME");
+extern std::string HomeDirPlus(const std::string extra_dir);
+extern void dir_list(const std::string &dPath, const bool &R, std::vector<std::string> &list);
 #endif
